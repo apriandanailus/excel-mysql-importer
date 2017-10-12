@@ -145,6 +145,7 @@ mysqli_query($conn, $sql);
 
 
 //  Loop through each row of the worksheet in turn
+// The imported data will start at row 2. the first row can be used as a headers or column names
 for ($row = 2; $row <= $highestRow; $row++)
 { 
     //  Read a row of data into an array
