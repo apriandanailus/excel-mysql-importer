@@ -13,5 +13,6 @@ Installation <br>
 Inside the folder you have classes of PHPExcel. which handles reading and processing your spreadsheet document to Mysql 
 <br> 
 The index.php file is an example how we can interact with classes and a simple import action. <br> 
+Just try to use the code in it and apply it in your own case. <br>
 <br> 
 For any question or issues just send me an email on fliez92@gmail.com <br>
