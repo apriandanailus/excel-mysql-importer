@@ -146,6 +146,7 @@ mysqli_query($conn, $sql);
 
 //  Loop through each row of the worksheet in turn
 // The imported data will start at row 2. the first row can be used as a headers or column names
+// If you want to start the insert from first row of the excel column just change "2" to "1"
 for ($row = 2; $row <= $highestRow; $row++)
 { 
     //  Read a row of data into an array
