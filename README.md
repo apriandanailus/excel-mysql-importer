@@ -15,6 +15,9 @@ Inside the folder you have classes of PHPExcel. which handles reading and proces
 The index.php file is an example how we can interact with classes and a simple import action. <br> 
 Just try to use the code in it and apply it in your own case. <br>
 <br>
+<br>
+
+
 Excel Templates <br> 
 The excel template is provided. it's support UTF-8 and UTF-16 <br>
 You may use any kind of spreadsheet as source of import (.CSV, XLS, XLSX) <br>

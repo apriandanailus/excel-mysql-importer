@@ -139,7 +139,7 @@ $sheet = $objPHPExcel->getSheet(0);
 $highestRow = $sheet->getHighestRow(); 
 $highestColumn = $sheet->getHighestColumn();
 
-//empty database 
+//empty database if necessary Sometimes you don't need to, depend on the case study of yours. but this code below will allow to empty database and insert a completely new sets of data from your spreadsheet
 $sql = "TRUNCATE TABLE stores";
 mysqli_query($conn, $sql);
 
@@ -163,26 +163,9 @@ for ($row = 2; $row <= $highestRow; $row++)
 	country, 
 	phone, 
 	fax, 
-	email, 
-	contact_warehouse, 
-	phone_warehouse, 
-	fax_warehouse, 
-	mail_warehouse, 
-	partner_of, 
-	business_hours, 
-	longitude, 
-	latitude, 
-	braketest, 
-	diagnose, 
-	service_brakes, 
-	service_hydraulic, 
-	service_tyres, 
-	service_chiller, 
-	service_crane, 
-	service_liftgate, 
-	service_construction, 
-	service_anhaenger)
-			VALUES ('".$rowData[0][0]."', '".$rowData[0][1]."', '".$rowData[0][2]."', '".$rowData[0][3]."', '".$rowData[0][4]."', '".$rowData[0][5]."', '".$rowData[0][6]."', '".$rowData[0][7]."', '".$rowData[0][8]."', '".$rowData[0][9]."', '".$rowData[0][10]."', '".$rowData[0][11]."', '".$rowData[0][12]."', '".$rowData[0][13]."', '".$rowData[0][14]."', '".$rowData[0][15]."', '".$rowData[0][16]."', '".$rowData[0][17]."', '".$rowData[0][18]."', '".$rowData[0][19]."', '".$rowData[0][20]."', '".$rowData[0][21]."', '".$rowData[0][22]."', '".$rowData[0][23]."', '".$rowData[0][24]."', '".$rowData[0][25]."', '".$rowData[0][26]."', '".$rowData[0][27]."')";
+	email)
+	
+    VALUES ('".$rowData[0][0]."', '".$rowData[0][1]."', '".$rowData[0][2]."', '".$rowData[0][3]."', '".$rowData[0][4]."', '".$rowData[0][5]."', '".$rowData[0][6]."', '".$rowData[0][7]."', '".$rowData[0][8]."', '".$rowData[0][9]."')";
 	
 	if (mysqli_query($conn, $sql)) {
 		$exceldata[] = $rowData[0];
